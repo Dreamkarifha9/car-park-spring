@@ -1,0 +1,25 @@
+server:
+  port: 8086
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/parking_development?currentSchema=parking
+    username: postgres
+    password: 253902
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2MB
+      max-request-size: 5MB
+  security:
+    user:
+      name: dream
+      password: 123456
+
